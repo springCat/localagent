@@ -40,6 +40,7 @@ public class LaunchedURLClassAgent
                 "          return new com.netflix.loadbalancer.Server(ip, port);\n" +
                 "      }\n"+
                 "    }";
+
         JavassistAop route1 = new JavassistAop("com.netflix.loadbalancer.PredicateBasedRule","choose");
         route1.setBefore(before);
         handleOne(loader, route1);

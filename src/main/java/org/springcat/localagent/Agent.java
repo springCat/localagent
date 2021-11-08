@@ -12,22 +12,8 @@ public class Agent
     public static void premain(String args, Instrumentation inst) throws Exception
     {
         System.out.println("Agent.premain start");
-//        ClassPool pool = ClassPool.getDefault();
-//        //for server start
-////        CtClass ctClass = pool.get("org.springframework.boot.loader.LaunchedURLClassLoader");
-//
-//        //for local app start in idea class sun.misc.Launcher$AppClassLoader
-//        CtClass ctClass = pool.get("org.springframework.boot.devtools.restart.classloader.RestartClassLoader");
-//
-//        CtConstructor[] ctConstructors = ctClass.getDeclaredConstructors();
-//        String after = "System.out.println(\"LaunchedURLClassAgent.modifyClass success\");\n" +
-//                "org.springcat.localagent.LaunchedURLClassAgent.modifyClass(this);\n";
-//        for (CtConstructor constructor : ctConstructors)
-//        {
-//            constructor.insertAfter(after);
-//        }
-//        ctClass.toClass();
-        System.out.println("ClassLoader.getSystemClassLoader()"+ClassLoader.getSystemClassLoader().getClass().toString());
+        String loaderClass = ClassLoader.getSystemClassLoader().getClass().toString();
+        System.out.println("ClassLoader.getSystemClassLoader()"+loaderClass);
         LaunchedURLClassAgent.modifyClass(ClassLoader.getSystemClassLoader());
 
         System.out.println("Agent.premain end");
