@@ -1,8 +1,5 @@
 package org.springcat.localagent;
 
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtConstructor;
 import java.lang.instrument.Instrumentation;
 
 
