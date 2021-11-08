@@ -17,7 +17,7 @@ public class LaunchedURLClassAgent
 
         String before= " System.out.println(\"enhance local route\");\n"+
                 "   if (key instanceof feign.Request) {\n" +
-                "      cn.hutool.setting.Setting localRoute = cn.hutool.setting.SettingUtil.get(\"localServer.setting\");\n" +
+                "      cn.hutool.setting.Setting localRoute = new cn.hutool.setting.Setting(\"localServer.setting\");\n" +
                 "      feign.RequestTemplate requestTemplate = ((feign.Request) key).requestTemplate();\n" +
                 "      java.net.URL url = cn.hutool.core.util.URLUtil.url(requestTemplate.url());\n" +
                 "      //严格模式,工程名+接口名\n" +
