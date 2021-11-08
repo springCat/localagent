@@ -21,7 +21,7 @@
 
 
 ## 路由规则:
-
+```
 [servers]
 bookstore-promotion-facade = 127.0.0.1:2223
 bookstore-promotion-biz = :2224
@@ -30,7 +30,7 @@ bookstore-promotion-biz = :2224
 bookstore-promotion-facade/freeVipActivity/getFreeMonthActivityInfo = :2223
 bookstore-interaction-biz/userGroupConfig/selectByUserGroupId = :8221
 userGroupConfig/selectByUserGroupId = :8221
-
+```
 
 ### 本地路由优先级规则:
 	模块+接口名 > 接口名 > 模块 > 正常的路由策略
