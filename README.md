@@ -11,13 +11,14 @@
 4. 也可以基于这个工程,开发其他功能
 
 ## 用法:
+1.下载代码到本地,mvn clean install编译打包,采用的是localagent-1.0-SNAPSHOT-jar-with-dependencies.jar这个类
 
-1. 在启动类上配置agent,  -javaagent:XXXX\localagent.jar
+2. 在启动类上配置agent,指向打出的jar地址  -javaagent:XXXX\localagent.jar
 
-2. 在resources目录下放入 localServer.setting
+3. 在resources目录下放入 localServer.setting
 启动服务
 
-3. 后续修改classes目录下的localServer.setting(运行时以这个目录的配置为准) 中配置接口或者工程路由,无需重启,会监控文件变更自动加载的
+4. 后续修改classes目录下的localServer.setting(运行时以这个目录的配置为准) 中配置接口或者工程路由,无需重启,会监控文件变更自动加载的
 
 
 ## 路由规则:
