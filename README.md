@@ -11,7 +11,8 @@
 4. 也可以基于这个工程,开发其他功能
 
 ## 用法:
-1.下载代码到本地,mvn clean install编译打包,采用的是localagent-1.0-SNAPSHOT-jar-with-dependencies.jar这个类
+
+1. 下载代码到本地,mvn clean install编译打包,采用的是localagent-1.0-SNAPSHOT-jar-with-dependencies.jar这个类
 
 2. 在启动类上配置agent,指向打出的jar地址  -javaagent:XXXX\localagent.jar
 
